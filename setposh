@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# USAGE
+# setposh atom -> source bashrc and terminal will be set to 'atom' theme 
+
+touch ~/.oh-my-poshrc
+echo "eval \"\$(oh-my-posh --init --shell bash --config \$(brew --prefix oh-my-posh)/themes/$1.omp.json)\"" > ~/.oh-my-poshrc
+
+# export OMP_THEME=whatever
+# eval "$(oh-my-posh --init --shell bash --config ~/.{theme}.omp.json)"
+

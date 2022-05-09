@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CURR="$(cat ~/ohmyposh/oh-my-poshrc)"
+RED='\033[0;35m'
+bold=$(tput bold)
+printf "Current oh my posh: ${RED}$(echo $CURR | perl -lne '/\/([^\/^.]*)\./ && print $1')\n"
+

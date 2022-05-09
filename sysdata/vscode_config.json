@@ -1,0 +1,99 @@
+{
+  "C_Cpp.updateChannel": "Insiders",
+  "editor.suggestSelection": "first",
+  "workbench.colorCustomizations": {
+    "list.warningForeground": "#FFA500"
+  },
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 180,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2
+  },
+  "prettier.printWidth": 100,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2
+  },
+  "[python]": {
+    "editor.formatOnSave": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "redhat.telemetry.enabled": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "go.toolsManagement.autoUpdate": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "liveshare.presence": true,
+  "editor.inlineSuggest.enabled": true,
+  "workbench.colorTheme": "Monokai",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "restoreTerminals.runOnStartup": false,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "cpp": false
+  },
+  "omnisharp.useGlobalMono": "always",
+  "[proto3]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "cmake.configureOnOpen": false,
+  "terminal.integrated.fontFamily": "MesloLGS NF"
+}

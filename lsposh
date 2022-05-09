@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# USAGE
+# lsposh -> prints all posh themes
+
+ls $(brew --prefix oh-my-posh)/themes/
