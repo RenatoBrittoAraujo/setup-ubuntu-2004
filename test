@@ -1,0 +1,12 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+xclip is already the newest version (0.13-2).
+xsel is already the newest version (1.2.0+git9bfc13d.20180109-3).
+The following packages were automatically installed and are no longer required:
+  libjemalloc2 liblua5.1-0 liblzf1 lua-bitop lua-cjson
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
