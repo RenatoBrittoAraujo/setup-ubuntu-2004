@@ -1,13 +1,18 @@
 #!/bin/bash
 
-if [ -z "$1" ] || [ -z "$2" ]
+if [ -z "$1" ]
 then
-    echo "usage: ./setup_signed_commits.sh [key password] [target email]"
+    echo "usage: ./setup_signed_commits.sh [target email] ?[password]"
 else
     sudo apt install xclip xsel -y &> /dev/null
-    gpg --default-new-key-algo rsa4096 --quick-generate-key --batch --passphrase "$1" "Renato Britto <$2>"  &> /dev/null
+    if [ -z "$2" ]
+    then 
+	gpg --default-new-key-algo rsa4096 --gen-key --passphrase $2 "Renato Britto <$1>" &> /dev/null	
+    else    
+    	gpg --default-new-key-algo rsa4096 --gen-key "Renato Britto <$1>" &> /dev/null
+    fi
     echo "Your PGP key has been created"
-    git config --global user.signingkey $2  &> /dev/null
+    git config --global user.signingkey $1  &> /dev/null
     git config --global commit.gpgsign true  &> /dev/null
     echo "Git has been successfully setup to sign with your key, all your commits should be auto signed now"
     echo ""
