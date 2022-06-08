@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# jarexec turns jar files into easy to use executables
+# usage: jarexec test.jar thing.sh
+
+echo "#!/bin/sh
+MYSELF=`which "$0" 2>/dev/null`
+[ $? -gt 0 -a -f "$0" ] && MYSELF="./$0"
+java=java
+if test -n "$JAVA_HOME"; then
+    java="$JAVA_HOME/bin/java"
+fi
+exec java -jar $MYSELF "$@" 
+exit 1
+" > stub.sh
+cat stub.sh $1 > $2 && chmod +x $2
+rm stub.sh
