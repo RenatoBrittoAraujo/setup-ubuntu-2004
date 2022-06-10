@@ -1,17 +1,12 @@
 #!/bin/bash
+TARGET_FILE=$(base64 -w 0 $1)
 
-# jarexec turns jar files into easy to use executables
-# usage: jarexec test.jar thing.sh
+# USAGE: ./jarexec <target-jar> <binary-name>
+# EXAMPLE: ./jarexec minecraft.jar minecraft.sh
 
-echo "#!/bin/sh
-MYSELF=`which "$0" 2>/dev/null`
-[ $? -gt 0 -a -f "$0" ] && MYSELF="./$0"
-java=java
-if test -n "$JAVA_HOME"; then
-    java="$JAVA_HOME/bin/java"
-fi
-exec java -jar $MYSELF "$@" 
-exit 1
-" > stub.sh
-cat stub.sh $1 > $2 && chmod +x $2
-rm stub.sh
+echo "
+JAR_FILE=\"$(printf $TARGET_FILE)\"
+printf \$JAR_FILE | base64 -d > .pretend_like_you_never_saw_me.jar
+java -jar .pretend_like_you_never_saw_me.jar; rm .pretend_like_you_never_saw_me.jar
+" > $2
+chmod +x $2
