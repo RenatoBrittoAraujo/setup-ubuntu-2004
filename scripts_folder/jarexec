@@ -1,9 +1,8 @@
 #!/bin/bash
-TARGET_FILE=$(base64 -w 0 $1)
-
 # USAGE: ./jarexec <target-jar> <binary-name>
 # EXAMPLE: ./jarexec minecraft.jar minecraft.sh
 
+TARGET_FILE=$(base64 -w 0 $1)
 echo "
 JAR_FILE=\"$(printf $TARGET_FILE)\"
 printf \$JAR_FILE | base64 -d > .pretend_like_you_never_saw_me.jar
