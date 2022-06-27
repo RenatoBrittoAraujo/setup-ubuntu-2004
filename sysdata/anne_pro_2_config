@@ -1,3 +1,5 @@
+First download Obinskit to edit keyboard functions: https://getannepro.com/pages/obinskit
+
 Most Linux distros use udev to manage access to physical devices. To allow non-root access our keyboard,
 
 before using Obenslab Starter for the first time, we need the following operations:
