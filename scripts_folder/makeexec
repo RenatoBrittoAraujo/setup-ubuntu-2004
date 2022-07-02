@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Usage: makexec <executable> [name]
+# If name not provided, it'll be the exectuables name
+
+EXECUTABLE=$1
+if [ -z $2 ]; then NAME=$EXECUTABLE; else NAME=$2; fi
+
+APPS_PATH=/home/$(whoami)/.local/share/applications
+
+cp $EXECUTABLE $APPS_PATH/$NAME
+
+echo "
+[Desktop Entry]
+Name=$NAME
+Exec=$APPS_PATH/$NAME %f
+Type=Application
+" > $APPS_PATH/$NAME.desktop
+
+echo "Done! Name of the new app is '$NAME'"
